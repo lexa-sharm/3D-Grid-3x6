@@ -1,0 +1,117 @@
+
+
+$block-size: 16.5%; /*200px*/
+$block-margin: 1px;
+$border-size: 1px;
+
+@mixin perspective($size) {
+	-o-perspective: $size;
+	-ms-perspective: $size;
+	-moz-perspective: $size;
+	-webkit-perspective: $size;
+	perspective: $size;
+}
+
+@mixin perspective-origin($X, $Y){
+	-o-perspective-origin: $X $Y;
+	-ms-perspective-origin: $X $Y;
+	-moz-perspective-origin: $X $Y;
+	-webkit-perspective-origin: $X $Y;
+	perspective-origin: $X $Y;
+}
+
+@mixin translateZ($size){
+	-o-transform: translateZ($size);
+	-ms-transform: translateZ($size);
+	-moz-transform: translateZ($size);
+	-webkit-transform: translateZ($size);
+	transform: translateZ($size);
+}
+
+@mixin box-sizing($st){
+	-o-box-sizing: $st;
+	-ms-box-sizing: $st;
+	-moz-box-sizing: $st;
+	-webkit-box-sizing: $st;
+	box-sizing: $st;
+}
+
+@mixin transition($tran-pr, $tran-dur, $tran-tim-fun){
+	-o-transition: $tran-pr $tran-dur $tran-tim-fun;
+	-ms-transition: $tran-pr $tran-dur $tran-tim-fun;
+	-moz-transition: $tran-pr $tran-dur $tran-tim-fun;
+	-webkit-transition: $tran-pr $tran-dur $tran-tim-fun;
+	transition: $tran-pr $tran-dur $tran-tim-fun;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #222;
+	font-family: Roboto, sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	/*@include perspective(100px);*/
+	/*@include perspective-origin(50%, 50%);*/
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*margin-top: ($block-size + ($block-margin * 2)) * 3 / -2;*/
+	/*margin-left: ($block-size + ($block-margin * 2)) * 3 / -2;*/
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+}
+
+.blocks {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/*width: ($block-size + $block-margin * 2) * 3;*/
+	width: 100%;
+	color: rgba(#fff, 0.8);
+	font-size: 16px;
+  	letter-spacing: 0.5em;
+  	text-transform: uppercase;
+  	@include translateZ(-100px);
+  	a {
+  		color: inherit;
+  		text-decoration: none;
+  	}
+  	& > li {
+  		float: left;
+  	}
+  	&:after {
+  		display: table;
+  		content: '';
+  		clear: both;
+  	}
+}
+
+.block {
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: $block-margin;
+	background-color: #111;
+	width: $block-size;
+	/*height: $block-size;*/
+	text-align: center;
+	/*line-height: $block-size;*/
+	@include transition(all, 200ms, ease-in-out);
+	@include box-sizing(border-box);
+	opacity: 0.7;
+	&:hover {
+		opacity: 1;
+	}
+	border: $border-size solid rgba(#999, 0.5);
+}
