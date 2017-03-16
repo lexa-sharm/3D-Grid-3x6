@@ -7,6 +7,9 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 100; }
 
+/*----------------------------------------------------------
+					STYLE GRID BEGIN
+----------------------------------------------------------*/
 .container {
   /*@include perspective(100px);*/
   /*@include perspective-origin(50%, 50%);*/
@@ -24,11 +27,10 @@ body {
     content: '';
     clear: both; }
 
-.blocks {
+.grid-3d {
   margin: 0;
   padding: 0;
   list-style: none;
-  /*width: ($block-size + $block-margin * 2) * 3;*/
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
@@ -39,25 +41,24 @@ body {
   -moz-transform: translateZ(-100px);
   -webkit-transform: translateZ(-100px);
   transform: translateZ(-100px); }
-  .blocks a {
+  .grid-3d a {
     color: inherit;
     text-decoration: none; }
-  .blocks > li {
+  .grid-3d > li {
     float: left; }
-  .blocks:after {
+  .grid-3d:after {
     display: table;
     content: '';
     clear: both; }
 
-.block {
+.grid-3d-item {
+  position: relative;
   box-sizing: border-box;
   cursor: pointer;
   margin: 1px;
   background-color: #111;
   width: 16.5%;
-  /*height: $block-size;*/
   text-align: center;
-  /*line-height: $block-size;*/
   -o-transition: all 200ms ease-in-out;
   -ms-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -70,7 +71,35 @@ body {
   box-sizing: border-box;
   opacity: 0.7;
   border: 1px solid rgba(153, 153, 153, 0.5); }
-  .block:hover {
+  .grid-3d-item:hover {
     opacity: 1; }
+
+/*----------------------------------------------------------
+					STYLE GRID END
+----------------------------------------------------------*/
+.grid-3d-item__bg {
+  width: 100%;
+  height: 100%;
+  background: url(../img/The-Thick-Forest.jpg) center no-repeat;
+  background-size: cover;
+  /* 	background: #66CC33;
+  background: #61d7a4; Old browsers
+  background: -moz-radial-gradient(center, ellipse cover,  #61d7a4 0%, #218359 100%); FF3.6+
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#61d7a4), color-stop(100%,#218359)); Chrome,Safari4+
+  background: -webkit-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Chrome10+,Safari5.1+
+  background: -o-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); Opera 12+
+  background: -ms-radial-gradient(center, ellipse cover,  #61d7a4 0%,#218359 100%); IE10+
+  background: radial-gradient(ellipse at center,  #61d7a4 0%,#218359 100%); W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', endColorstr='#218359',GradientType=1 ); IE6-9 fallback on horizontal gradient */ }
+
+.grid-3d-item__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  margin-top: -19px;
+  margin-left: -38px;
+  font-size: 2em;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

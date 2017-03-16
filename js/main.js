@@ -9,8 +9,8 @@ $(document).ready(function() {
 });
 
 function slide_resize(){
-  var blockWidth = $('.block').width();
-  $('.block').css({height: blockWidth + 'px'});
+  var blockWidth = $('.grid-3d-item').width();
+  $('.grid-3d-item').css({height: blockWidth + 'px'});
 }
 
 
@@ -251,7 +251,7 @@ function animate() {
 /*
  * Initialize
  */
-new Blocks($('.block'));
+new Blocks($('.grid-3d-item'));
 
 
 
