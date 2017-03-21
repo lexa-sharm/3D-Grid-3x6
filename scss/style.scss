@@ -85,10 +85,10 @@ body {
 	padding: 0;
 	list-style: none;
 	width: 100%;
-	color: rgba(#fff, 0.8);
+	color: rgba(#fff, 1);
 	font-size: 16px;
-  	letter-spacing: 0.5em;
-  	text-transform: uppercase;
+  	/*letter-spacing: 0.5em;*/
+  	/*text-transform: uppercase;*/
   	@include translateZ(-100px);
   	a {
   		color: inherit;
@@ -148,8 +148,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 
 .grid-3d-item__bg:hover {
 	.grid-3d-item__title {
-		top: 0;
-		opacity: 0;
+		top: 40px;
+		opacity: 1;
 	}
 	.grid-3d-item__opacity {
 		opacity: 0.6;
@@ -157,6 +157,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 	.grid-3d-item__descp {
 		bottom: 0;
 		background: rgba(28,28,28,0.9);
+		opacity: 0.9;
 	}
 }
 
@@ -169,13 +170,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 	margin-left: -38px;
 	font-size: 2em;
 	text-transform: uppercase;
+	letter-spacing: 0.3em;
 	transition: all 1s;
 }
 
 .grid-3d-item__opacity {
 	width: 100%;
 	height: 100%;
-	background: url(../img/The-Thick-Forest.jpg) center no-repeat;
+	background: url(../img/css_bg.jpg) center no-repeat;
 	background-size: cover;
 	opacity: 0.3;
 	transition: opacity 1s;
@@ -189,4 +191,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 	height: 65%;
 	background: rgba(28,28,28,0);
 	transition: all 1s;
+	color: #a5a5a5;
+	opacity: 0;
+}
+
+.grid-3d-item__descp h3 {
+	margin: 10px 0;
+	padding: 0;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.grid-3d-item__descp ul {
+	margin: 0;
+	padding-left: 30px;
+	font-size: 0.8em;
+	text-align: left;
 }

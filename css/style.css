@@ -32,10 +32,10 @@ body {
   padding: 0;
   list-style: none;
   width: 100%;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   font-size: 16px;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
+  /*letter-spacing: 0.5em;*/
+  /*text-transform: uppercase;*/
   -o-transform: translateZ(-100px);
   -ms-transform: translateZ(-100px);
   -moz-transform: translateZ(-100px);
@@ -96,13 +96,14 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', endColorstr='#218359',GradientType=1 ); IE6-9 fallback on horizontal gradient */ }
 
 .grid-3d-item__bg:hover .grid-3d-item__title {
-  top: 0;
-  opacity: 0; }
+  top: 40px;
+  opacity: 1; }
 .grid-3d-item__bg:hover .grid-3d-item__opacity {
   opacity: 0.6; }
 .grid-3d-item__bg:hover .grid-3d-item__descp {
   bottom: 0;
-  background: rgba(28, 28, 28, 0.9); }
+  background: rgba(28, 28, 28, 0.9);
+  opacity: 0.9; }
 
 .grid-3d-item__title {
   position: absolute;
@@ -113,12 +114,13 @@ body {
   margin-left: -38px;
   font-size: 2em;
   text-transform: uppercase;
+  letter-spacing: 0.3em;
   transition: all 1s; }
 
 .grid-3d-item__opacity {
   width: 100%;
   height: 100%;
-  background: url(../img/The-Thick-Forest.jpg) center no-repeat;
+  background: url(../img/css_bg.jpg) center no-repeat;
   background-size: cover;
   opacity: 0.3;
   transition: opacity 1s; }
@@ -130,6 +132,20 @@ body {
   width: 100%;
   height: 65%;
   background: rgba(28, 28, 28, 0);
-  transition: all 1s; }
+  transition: all 1s;
+  color: #a5a5a5;
+  opacity: 0; }
+
+.grid-3d-item__descp h3 {
+  margin: 10px 0;
+  padding: 0;
+  font-size: 1em;
+  text-transform: uppercase; }
+
+.grid-3d-item__descp ul {
+  margin: 0;
+  padding-left: 30px;
+  font-size: 0.8em;
+  text-align: left; }
 
 /*# sourceMappingURL=style.css.map */
