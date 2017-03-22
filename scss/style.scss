@@ -111,7 +111,6 @@ body {
 	margin: $block-margin;
 	background-color: #111;
 	width: $block-size;
-	text-align: center;
 	@include transition(all, 200ms, ease-in-out);
 	@include box-sizing(border-box);
 	opacity: 0.7;
@@ -151,7 +150,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 		top: 40px;
 		opacity: 1;
 	}
-	.grid-3d-item__opacity {
+	.grid-3d-item__opacity img {
 		opacity: 0.6;
 	}
 	.grid-3d-item__descp {
@@ -163,22 +162,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 
 .grid-3d-item__title {
 	position: absolute;
+	display: block;
+	width: 100%;
 	top: 50%;
-	left: 50%;
-	margin: 0 auto;
 	margin-top: -19px;
-	margin-left: -38px;
+	text-align: center;
 	font-size: 2em;
 	text-transform: uppercase;
 	letter-spacing: 0.3em;
 	transition: all 1s;
 }
 
-.grid-3d-item__opacity {
+.grid-3d-item__opacity img {
 	width: 100%;
-	height: 100%;
-	background: url(../img/css_bg.jpg) center no-repeat;
-	background-size: cover;
 	opacity: 0.3;
 	transition: opacity 1s;
 }
@@ -200,6 +196,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61d7a4', end
 	padding: 0;
 	font-size: 1em;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .grid-3d-item__descp ul {
